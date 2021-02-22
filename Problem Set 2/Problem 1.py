@@ -51,17 +51,12 @@ Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x
             Month 12 Remaining balance: 31.38
 
 """
-balance = 42
-annualInterestRate = 0.2
-monthlyPaymentRate = 0.04
 
 monthlyInterestRate = annualInterestRate / 12.0
-
 count = 0
 while count < 12:
     minimumMonthlyPayment = monthlyPaymentRate * balance
     monthlyUnpaidBalance = balance - minimumMonthlyPayment
     balance = monthlyUnpaidBalance + (monthlyInterestRate * monthlyUnpaidBalance)
-    print("Month " + str(count) + " Remaining balance: " + str(round(balance, 2)))
     count += 1
 print("Remaining balance: " + str(round(balance, 2)))
